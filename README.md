@@ -1,7 +1,7 @@
 # PM01Examen13142 - Examen Primer Parcial
 
 **Estudiante:** Leany Lizeth Hernandez Martinez  
-**Número de cuenta:** 123630142
+**Número de cuenta:** 123630142  
 **Asignatura:** Programación para Dispositivos Móviles I  
 **Catedrático:** Ing. Ricardo Enrique Lagos Mendoza  
 **Fecha:** 24 de octubre de 2026  
@@ -16,6 +16,7 @@ Aplicación móvil desarrollada en Android Studio utilizando Java y SQLite para 
   - Validaciones con AlertDialog para campos vacíos.
   - Expresiones regulares (RegEx) para restringir el nombre solo a letras y el teléfono solo a números.
   - Guardado de datos e imagen (byte array) en base de datos SQLite local.
+  <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/27b63e11-a178-4577-a012-d9758839d291" />
 
 - **Pantalla 2 (Lista de Contactos):**
   - ListView conectado a SQLite.
@@ -25,20 +26,24 @@ Aplicación móvil desarrollada en Android Studio utilizando Java y SQLite para 
     - **Ver Imagen:** muestra la foto guardada del contacto.
     - **Eliminar:** remueve el registro de la BD y refresca la lista.
     - **Actualizar:** pasa los datos del contacto de vuelta a la pantalla de registro para editarlos.
+     <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/97b0de93-9893-4488-9315-6992e8d9488d" />
 
 - **Pantalla 3 (Llamadas):**
   - Al presionar un contacto se muestra un AlertDialog para confirmar si se desea realizar la llamada.
   - Verificación y solicitud del permiso `CALL_PHONE` en tiempo de ejecución.
   - Ejecución de la llamada mediante Intent ACTION_CALL concatenando el código de área + número.
- 
-  ## Arquitectura y Flujo de la Aplicación
+   <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/484ccfd9-b687-439c-bc9d-ec12968989ff" />
+
+## Arquitectura y Flujo de la Aplicación
+
+```text
 +-----------------------------------------------------------------------------+
 |                               PM01E13142 App                                |
 +-----------------------------------------------------------------------------+
-|
-+-------------------------------+-------------------------------+
-|                                                               |
-v                                                               v
+                                       |
+       +-------------------------------+-------------------------------+
+       |                                                               |
+       v                                                               v
 +-------------------------------+                            +-------------------------------+
 |    Pantalla 1: MainActivity   |                            |   Pantalla 2: ActivityLista   |
 |  (Registro y Edición)         |                            |  (Listado y Gestión)          |
@@ -49,9 +54,9 @@ v                                                               v
 | - Guardar en BD               |                            | - Botón Ver Imagen            |
 | - Botón Ver Contactos --------+--------------------------->| - Botón Actualizar (Abre P1)  |
 +-------------------------------+                            | - Botón Eliminar              |
-|                                             +-------------------------------+
-|                                                             |
-v                                                             v
+               |                                             +-------------------------------+
+               |                                                             |
+               v                                                             v
 +-------------------------------+                            +-------------------------------+
 |  Base de Datos Local SQLite   |<---------------------------|  Selección de Contacto        |
 |  (SQLiteConnection)           |                            +-------------------------------+
@@ -64,11 +69,4 @@ v                                                             v
 | - nota (TEXT)                 |                            | - Validación Permiso          |
 | - imagen (BLOB)               |                            |   (CALL_PHONE)                |
 +-------------------------------+                            | - Intent.ACTION_CALL          |
-+-------------------------------+
-
-## Capturas de Pantalla
-
-| Registro de Contacto | Lista y Buscador | Confirmación de Llamada |
-<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/27b63e11-a178-4577-a012-d9758839d291" />
- <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/97b0de93-9893-4488-9315-6992e8d9488d" />
- <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/484ccfd9-b687-439c-bc9d-ec12968989ff" />
+                                                             +-------------------------------+
