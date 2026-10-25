@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta de colores armoniosa en tonos rosados -->
+    <color name="primary">#C2185B</color>          <!-- Rosa Fuerte / Frambuesa -->
+    <color name="primary_dark">#880E4F</color>     <!-- Rosa Obscuro Elegante -->
+    <color name="color_accent">#E91E63</color>      <!-- Fucsia / Rosa Vibrante -->
+    <color name="fucsia">#E91E63</color>            <!-- Compatibilidad -->
+
+    <color name="pink_soft">#F8BBD0</color>         <!-- Pastel Rosa Suave -->
+    <color name="pink_light">#FCE4EC</color>        <!-- Fondo de Botones/Tarjetas -->
+    <color name="bg_app">#FFF0F5</color>            <!-- Fondo Principal Lavanda-Rosa -->
+    <color name="card_bg">#FFFFFF</color>           <!-- Blanco Tarjeta -->
+
+    <color name="text_primary">#3E2723</color>      <!-- Texto Principal Oscuro Cálido -->
+    <color name="text_secondary">#880E4F</color>    <!-- Texto Secundario en Tono Rosa Oscuro -->
+    <color name="text_hint">#BA68C8</color>         <!-- Pista Suave -->
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
