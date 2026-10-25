@@ -34,6 +34,6 @@ Aplicación móvil desarrollada en Android Studio utilizando Java y SQLite para 
 ## Capturas de Pantalla
 
 | Registro de Contacto | Lista y Buscador | Confirmación de Llamada |
-| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/27b63e11-a178-4577-a012-d9758839d291" />
-| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/97b0de93-9893-4488-9315-6992e8d9488d" />
-| <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/484ccfd9-b687-439c-bc9d-ec12968989ff" />|
+<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/27b63e11-a178-4577-a012-d9758839d291" />
+ <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/97b0de93-9893-4488-9315-6992e8d9488d" />
+ <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/484ccfd9-b687-439c-bc9d-ec12968989ff" />
