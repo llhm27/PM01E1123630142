@@ -30,6 +30,41 @@ Aplicación móvil desarrollada en Android Studio utilizando Java y SQLite para 
   - Al presionar un contacto se muestra un AlertDialog para confirmar si se desea realizar la llamada.
   - Verificación y solicitud del permiso `CALL_PHONE` en tiempo de ejecución.
   - Ejecución de la llamada mediante Intent ACTION_CALL concatenando el código de área + número.
+ 
+  ## Arquitectura y Flujo de la Aplicación
++-----------------------------------------------------------------------------+
+|                               PM01E13142 App                                |
++-----------------------------------------------------------------------------+
+|
++-------------------------------+-------------------------------+
+|                                                               |
+v                                                               v
++-------------------------------+                            +-------------------------------+
+|    Pantalla 1: MainActivity   |                            |   Pantalla 2: ActivityLista   |
+|  (Registro y Edición)         |                            |  (Listado y Gestión)          |
++-------------------------------+                            +-------------------------------+
+| - Selección Foto (Cámara/Gal) |                            | - Buscador (Filtro)           |
+| - Spinner Países (+504, etc.) |                            | - ListView Contactos          |
+| - Validaciones RegEx          |                            | - Botón Compartir (Intent)    |
+| - Guardar en BD               |                            | - Botón Ver Imagen            |
+| - Botón Ver Contactos --------+--------------------------->| - Botón Actualizar (Abre P1)  |
++-------------------------------+                            | - Botón Eliminar              |
+|                                             +-------------------------------+
+|                                                             |
+v                                                             v
++-------------------------------+                            +-------------------------------+
+|  Base de Datos Local SQLite   |<---------------------------|  Selección de Contacto        |
+|  (SQLiteConnection)           |                            +-------------------------------+
++-------------------------------+                                            |
+| Tabla: contactos              |                                            v
+| - id (INTEGER)                |                            +-------------------------------+
+| - pais (TEXT)                 |                            |    Pantalla 3: Módulo Llamar  |
+| - nombre (TEXT)               |                            +-------------------------------+
+| - telefono (TEXT)             |                            | - AlertDialog ("¿Llamar a?") |
+| - nota (TEXT)                 |                            | - Validación Permiso          |
+| - imagen (BLOB)               |                            |   (CALL_PHONE)                |
++-------------------------------+                            | - Intent.ACTION_CALL          |
++-------------------------------+
 
 ## Capturas de Pantalla
 
